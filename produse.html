@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produse - Fashion World</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1>Fashion World</h1>
+      <nav class="nav-links">
+        <a href="index.html">Acasă</a>
+        <a href="produse.html" class="active">Produse</a>
+        <a href="colectii.html">Colecții</a>
+        <a href="despre.html">Despre</a>
+        <a href="contact.html">Contact</a>
+        <a href="avatar.html">Probează</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="products-page">
+    <h2>Produsele Noastre</h2>
+    <div class="product-container">
+      <!-- Produse -->
+      <!-- Exemplu produs (15 produse) -->
+      <div class="product">
+        <img src="https://images.pexels.com/photos/9511241/pexels-photo-9511241.jpeg" alt="Rochie Eleganta">
+        <h3>Rochie Eleganta</h3>
+        <p class="price">199 RON</p>
+        <button class="add-to-cart" data-id="1" data-name="Rochie Eleganta" data-price="199">Adaugă în coș</button>
+      </div>
+      <!-- Adaugă încă 14 produse similare -->
+
+      <!-- Produse 2 până la 15 ... -->
+      <div class="product">
+        <img src="https://images.pexels.com/photos/9511237/pexels-photo-9511237.jpeg" alt="Bluză Albă">
+        <h3>Bluză Albă</h3>
+        <p class="price">129 RON</p>
+        <button class="add-to-cart" data-id="2" data-name="Bluză Albă" data-price="129">Adaugă în coș</button>
+      </div>
+      <!-- Continuă pentru 15 produse -->
+    </div>
+
+    <!-- Coșul de cumpărături -->
+    <div class="cart">
+      <h2>Coșul Tău</h2>
+      <ul id="cart-items"></ul>
+      <p id="total-price">Total: 0 RON</p>
+
+      <!-- Formular de checkout -->
+      <form id="checkout-form">
+        <h3>Detalii Comandă</h3>
+        <input type="text" id="name" placeholder="Nume complet" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="address" placeholder="Adresă de livrare" required>
+        <button type="submit" id="checkout-btn">Finalizează Comanda</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2025 Fashion World | Toate drepturile rezervate</p>
+  </footer>
+</body>
+</html>

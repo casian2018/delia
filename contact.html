@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Fashion World</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1>Fashion World</h1>
+      <nav class="nav-links">
+        <a href="index.html">Acasă</a>
+        <a href="produse.html">Produse</a>
+        <a href="colectii.html">Colecții</a>
+        <a href="despre.html">Despre</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="avatar.html">Probează</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-section">
+    <section class="container1">
+      <h2>Contactează-ne</h2>
+      <form id="contact-form">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mesaj">Mesaj:</label>
+        <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Trimite</button>
+      </form>
+      <p id="status"></p>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2025 Fashion World | Toate drepturile rezervate</p>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nume = document.getElementById('nume').value;
+      const email = document.getElementById('email').value;
+      const mesaj = document.getElementById('mesaj').value;
+
+      const webhookURL = 'https://discord.com/api/webhooks/ID_WEBHOOK'; // Înlocuiește cu URL-ul tău
+
+      const payload = {
+        content: `📩 **Mesaj nou de la ${nume}**\n📧 Email: ${email}\n📝 Mesaj: ${mesaj}`
+      };
+
+      fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => {
+        if (response.ok) {
+          document.getElementById('status').textContent = 'Mesajul a fost trimis cu succes!';
+          document.getElementById('contact-form').reset();
+        } else {
+          document.getElementById('status').textContent = 'A apărut o eroare. Te rugăm să încerci din nou.';
+        }
+      })
+      .catch(error => {
+        console.error('Eroare:', error);
+        document.getElementById('status').textContent = 'A apărut o eroare. Te rugăm să încerci din nou.';
+      });
+    });
+  </script>
+</body>
+</html>
