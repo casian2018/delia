@@ -1,69 +1,242 @@
 <!DOCTYPE html>
 <html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produse - Fashion World</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
-</head>
-<body>
-  <header class="main-header">
-    <div class="container">
-      <h1>Fashion World</h1>
-      <nav class="nav-links">
-        <a href="index.html">Acasă</a>
-        <a href="produse.html" class="active">Produse</a>
-        <a href="colectii.html">Colecții</a>
-        <a href="despre.html">Despre</a>
-        <a href="contact.html">Contact</a>
-        <a href="avatar.html">Probează</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="products-page">
-    <h2>Produsele Noastre</h2>
-    <div class="product-container">
-      <!-- Produse -->
-      <!-- Exemplu produs (15 produse) -->
-      <div class="product">
-        <img src="https://images.pexels.com/photos/9511241/pexels-photo-9511241.jpeg" alt="Rochie Eleganta">
-        <h3>Rochie Eleganta</h3>
-        <p class="price">199 RON</p>
-        <button class="add-to-cart" data-id="1" data-name="Rochie Eleganta" data-price="199">Adaugă în coș</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produse - Fashion World</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <h1>Fashion World</h1>
+        <nav class="nav-links">
+          <a href="index.html">Acasă</a>
+          <a href="produse.html" class="active">Produse</a>
+          <a href="colectii.html">Colecții</a>
+          <a href="despre.html">Despre</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-      <!-- Adaugă încă 14 produse similare -->
+    </header>
 
-      <!-- Produse 2 până la 15 ... -->
-      <div class="product">
-        <img src="https://images.pexels.com/photos/9511237/pexels-photo-9511237.jpeg" alt="Bluză Albă">
-        <h3>Bluză Albă</h3>
-        <p class="price">129 RON</p>
-        <button class="add-to-cart" data-id="2" data-name="Bluză Albă" data-price="129">Adaugă în coș</button>
+    <main class="products-page">
+      <h2>Produsele Noastre</h2>
+      <div class="product-container">
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+          <h3>Carte: Istoria Modei</h3>
+          <p class="price">89 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="1"
+            data-name="Istoria Modei"
+            data-price="89"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/4066761/pexels-photo-4066761.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Fashion Icons"
+          />
+          <h3>Carte: Fashion Icons</h3>
+          <p class="price">105 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="2"
+            data-name="Fashion Icons"
+            data-price="105"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+          <h3>Carte: Stilul Parizian</h3>
+          <p class="price">95 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="3"
+            data-name="Stilul Parizian"
+            data-price="95"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+
+          <h3>Carte: Moda Vintage</h3>
+          <p class="price">110 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="4"
+            data-name="Moda Vintage"
+            data-price="110"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+
+          <h3>Carte: Designeri Celebri</h3>
+          <p class="price">120 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="5"
+            data-name="Designeri Celebri"
+            data-price="120"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+
+          <h3>Carte: Fashion Sketchbook</h3>
+          <p class="price">99 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="6"
+            data-name="Fashion Sketchbook"
+            data-price="99"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+
+          <h3>Carte: Stil Urban</h3>
+          <p class="price">85 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="7"
+            data-name="Stil Urban"
+            data-price="85"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+
+          <h3>Carte: Arta Textilă</h3>
+          <p class="price">130 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="8"
+            data-name="Arta Textilă"
+            data-price="130"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+
+          <h3>Carte: Ghidul Modelului</h3>
+          <p class="price">90 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="9"
+            data-name="Ghidul Modelului"
+            data-price="90"
+          >
+            Adaugă în coș
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://images.pexels.com/photos/1424345/pexels-photo-1424345.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Carte: Istoria Modei"
+          />
+
+          <h3>Carte: Stil Contemporan</h3>
+          <p class="price">98 RON</p>
+          <button
+            class="add-to-cart"
+            data-id="10"
+            data-name="Stil Contemporan"
+            data-price="98"
+          >
+            Adaugă în coș
+          </button>
+        </div>
       </div>
-      <!-- Continuă pentru 15 produse -->
-    </div>
 
-    <!-- Coșul de cumpărături -->
-    <div class="cart">
-      <h2>Coșul Tău</h2>
-      <ul id="cart-items"></ul>
-      <p id="total-price">Total: 0 RON</p>
+      <div class="cart">
+        <h2>Coșul Tău</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: 0 RON</p>
 
-      <!-- Formular de checkout -->
-      <form id="checkout-form">
-        <h3>Detalii Comandă</h3>
-        <input type="text" id="name" placeholder="Nume complet" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="text" id="address" placeholder="Adresă de livrare" required>
-        <button type="submit" id="checkout-btn">Finalizează Comanda</button>
-      </form>
-    </div>
-  </main>
+        <form id="checkout-form">
+          <h3>Detalii Comandă</h3>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nume complet"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="Adresă de livrare"
+            required
+          />
+          <button type="submit" id="checkout-btn">Finalizează Comanda</button>
+        </form>
+      </div>
+    </main>
 
-  <footer class="main-footer">
-    <p>© 2025 Fashion World | Toate drepturile rezervate</p>
-  </footer>
-</body>
+    <footer class="main-footer">
+      <p>© 2025 Fashion World | Toate drepturile rezervate</p>
+    </footer>
+  </body>
 </html>

@@ -10,16 +10,14 @@ function addToCart(product) {
     if (existingProduct) {
       existingProduct.quantity += 1; // Dacă există, creștem cantitatea
     } else {
-      product.quantity = 1; // Dacă nu există, îl adăugăm cu cantitatea 1
+      product.quantity = 1;
       cart.push(product);
     }
     
-    // Salvăm coșul în localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCart();
   }
   
-  // Actualizare coș
   function updateCart() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let cartItems = document.getElementById('cart-items');
@@ -36,7 +34,6 @@ function addToCart(product) {
     document.getElementById('total-price').textContent = `Total: ${totalPrice} RON`;
   }
   
-  // Eveniment pe butoanele de adăugare în coș
   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', function() {
       const product = {
@@ -64,7 +61,7 @@ function addToCart(product) {
     formData.append('entry.XXXX', address); // Înlocuiește cu ID-ul din Google Forms
     formData.append('entry.XXXX', JSON.stringify(cart)); // Produse în coș
   
-    fetch('https://docs.google.com/forms/d/e/1FAIpQLSXXXX/formResponse', {
+    fetch('https://script.google.com/macros/s/AKfycbyoDa7CEeWjS0-LH7TuL006c_Rp6VbKNHi5_Qb0Q054wNnsOJh9d8kWGRoVn12JOoSJ/exec', {
       method: 'POST',
       body: formData
     })
@@ -79,6 +76,4 @@ function addToCart(product) {
     });
   });
   
-  // Actualizare coș la încărcarea paginii
   window.onload = updateCart;
-  
